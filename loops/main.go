@@ -25,4 +25,18 @@ func main() {
 
     animalsSlice = slices.Delete(animalsSlice, 0, 1) //goes for range deletion
     fmt.Println(animalsSlice)
+
+    for i:=0; i<len(animalsSlice); i++ {
+        fmt.Printf("animal %s\n", animalsSlice[i])
+    }
+    for i:= 0; i < 10; i++ {
+       fmt.Println(i) 
+    }
+
+    for index, value := range animalsSlice {
+        fmt.Printf("index %d and animal is %s\n", index, value)
+    }
+    for value := range 12{
+        fmt.Printf("%d\n", value)
+    }
 }
