@@ -17,7 +17,6 @@ func (p *Person) changeName(name string ) {
 	p.Name = name
 }
 func main() {
-
 	myPerson := Person{
 		Name: "benni",
 	}
@@ -30,4 +29,9 @@ func main() {
     anotherPerson.changeName("BenniNew")
 
     fmt.Printf("func call for person: %+v\n", anotherPerson)
+
+    a:= 7
+    b:= &a
+    fmt.Println(b)
+    fmt.Println(*b)
 }
