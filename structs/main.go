@@ -13,7 +13,7 @@ func NewPerson(name string, age int) Person {
 		Age:  age,
 	}
 }
-func (p *Person) changeName(name string ) {
+func (p *Person) changeName(name string) {
 	p.Name = name
 }
 func main() {
@@ -25,13 +25,23 @@ func main() {
 	// format with %+v
 	fmt.Printf("my person %+v\n", myPerson)
 
-    anotherPerson := NewPerson("Bennii", 32)
-    anotherPerson.changeName("BenniNew")
+	anotherPerson := NewPerson("Bennii", 32)
+	anotherPerson.changeName("BenniNew")
 
-    fmt.Printf("func call for person: %+v\n", anotherPerson)
+	fmt.Printf("func call for person: %+v\n", anotherPerson)
 
-    a:= 7
-    b:= &a
-    fmt.Println(b)
-    fmt.Println(*b)
+	a := 7
+	b := &a
+	fmt.Println(b)
+	fmt.Println(*b)
+
+	mySlice := []int{
+		1, 2, 3,
+	}
+
+	for index, _ := range mySlice {
+		mySlice[index]++
+	}
+
+	fmt.Println(mySlice)
 }
